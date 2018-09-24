@@ -17,6 +17,7 @@ class App extends Component {
 			selectedVideo: null
 		};
 		this.videoSearch('siliconvalley')
+		// this is a method-- videoSearch
 
 	}
 // definging a callback
@@ -43,15 +44,17 @@ class App extends Component {
 		);
 	}
 }
-
 ReactDOM.render(<App />, document.querySelector('.container'));
-
+		// this.videoSearch('siliconvalley')
+		// videoSearch is a method.
+		// we call it in the SearchBar
+//
 
 // line 25 we are passing information from the parent component (App) to the
 // child component,  <VideoList />.
 // Defining a property on the JSX tag <VideoList />. line 25
 // Videos = reference to a  {Javascript variable} so you use the {}
 // Passing data thorugh PROPS.-- passing prop, videos to <VideoList />
-// videos =  comes from the object, {videos} on line 14
-// Every time the app rerenders-- when this.setState is called,  <VideoList /> will get the
-// new list of videos.
+// videos =  comes from the object, {videos} on line 16
+// Every time the app rerenders-- when this.setState is called,
+// <VideoList /> will get the new list of videos.

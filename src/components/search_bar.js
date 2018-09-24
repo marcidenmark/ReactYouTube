@@ -22,10 +22,14 @@ class SearchBar extends Component {
 	}
 }
 export default SearchBar;
+
 // line 13 creates the element starting as an empty string.
 // line 13 the value of the input is equal to the state.
 
-//
+// line 19, onINputChange has 2 functions:
+	//Line 20
+	// sets state.
+	// line  21 fiers off call back onSearchTermChange
 // to do:
 // User can type input which will trigger
 // an API request to the YouTube API.
