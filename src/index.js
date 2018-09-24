@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 import YTSearch from 'youtube-api-search';
-const API_KEY = 'AIzaSyA7xjqxI8Dobx2EhGsKG4xBOQzhUZ5JD-g';
+import _ from 'lodash';
 
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
+
+const API_KEY = 'AIzaSyA7xjqxI8Dobx2EhGsKG4xBOQzhUZ5JD-g';
+
 
 class App extends Component {
 	constructor(props) {
@@ -33,9 +36,11 @@ class App extends Component {
 		});
 	}
 	render() {
+		const videoSearch = _ .debounce((term ) => { this.videoSearch(term)}, 300 )
+		// the function will be called once every 300 miliseconds
 		return (
 			<div>
-				<SearchBar onSearchTermChange={term => this.videoSearch(term)} />
+				<SearchBar onSearchTermChange={videoSearch} />
 				<VideoDetail video= {this.state.selectedVideo} />
 				<VideoList
 					onVideoSelect={selectedVideo => this.setState({selectedVideo})}
@@ -48,6 +53,7 @@ ReactDOM.render(<App />, document.querySelector('.container'));
 		// this.videoSearch('siliconvalley')
 		// videoSearch is a method.
 		// we call it in the SearchBar
+		// onto the property, on SearchTermChange: ( props.onSearchChange)
 //
 
 // line 25 we are passing information from the parent component (App) to the
