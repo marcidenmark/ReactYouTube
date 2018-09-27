@@ -1,7 +1,5 @@
 const path = require('path');
 
-
-
 module.exports = {
   entry: ['./src/index.js'],
 
@@ -12,8 +10,6 @@ module.exports = {
   },
 
 // what is the function of the 'output' prop in your webpack.config?
-
-
   module: {
     loaders: [
       {
