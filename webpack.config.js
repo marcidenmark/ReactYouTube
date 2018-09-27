@@ -1,10 +1,19 @@
+const path = require('path');
+
+
+
 module.exports = {
   entry: ['./src/index.js'],
+
   output: {
-    path: __dirname,
+    path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
     filename: 'bundle.js'
   },
+
+// what is the function of the 'output' prop in your webpack.config?
+
+
   module: {
     loaders: [
       {
