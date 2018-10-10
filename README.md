@@ -7,5 +7,5 @@ A user can search YouTubes API and play any video from all devices.
 - Redux
 - Javascript (ES6, and JSX)
 - HTML and CSS
-- And Bootstrap for instant styling
+- Bootstrap for instant styling
 - AJAX requests to interact with the YouTube API
