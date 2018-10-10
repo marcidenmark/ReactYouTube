@@ -1,9 +1,10 @@
-# YouTube Video Player
+# YouTube Video Player build with React and Redux
 ## This is a mini app using pure React to create a YouTube video Player.
 A user can search YouTubes API and play any video from all devices.
 
 ### Technologies used
 - React
+- Redux
 - Javascript (ES6, and JSX)
 - HTML and CSS
 - And Bootstrap for instant styling
