@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-
 module.exports = {
   entry: './src/index.js',
 
@@ -11,29 +10,28 @@ module.exports = {
     filename: 'bundle.js'
   },
 
- //  plugins: [
-	// newHtmlWebpackPlugin({
-	// 	template: '!!html-loader!templates/index.html'
-	// })
- //  ],
-
-
-
-// what is the function of the 'output' prop in your webpack.config?
   devtool: 'sourcemap',
 
-
   module: {
-    loaders: [
+    rules: [
       {
+        test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel',
-        query: {
-          presets: ['react', 'es2015', 'stage-1']
-        }
-      }
+        loader: 'babel-loader'
+      },
+      {
+        test: /\.s?css$/,
+        exclude: /node_modules/,
+        loaders: [ 'style-loader', 'css-loader', 'sass-loader' ]
+      },
+      {
+        test: /\.html$/,
+        loader: 'html-loader'
+      },
     ]
   },
+
+
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
