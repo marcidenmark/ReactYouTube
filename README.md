@@ -9,3 +9,6 @@ A user can search YouTubes API and play any video from all devices.
 - HTML and CSS
 - Bootstrap for instant styling
 - AJAX requests to interact with the YouTube API
+
+You can see this in action on:
+https://marcidenmark.github.io/ReactYouTubeVideoPlayer/
